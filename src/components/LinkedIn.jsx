@@ -1,8 +1,10 @@
 import React from 'react'
 
+import componentStyles from './Component.module.css'
+
 function LinkedIn() {
   return (
-    <div>LinkedIn</div>
+    <div className={`${componentStyles.parentContainer}`}>LinkedIn</div>
   )
 }
 

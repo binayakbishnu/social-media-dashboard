@@ -1,8 +1,10 @@
 import React from 'react'
 
+import componentStyles from './Component.module.css'
+
 function Twitter() {
   return (
-    <div>Twitter</div>
+    <div className={`${componentStyles.parentContainer}`}>Twitter</div>
   )
 }
 
