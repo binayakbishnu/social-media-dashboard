@@ -55,7 +55,7 @@ function Dashboard() {
     };
 
 
-    //- fetching initial data
+    /* //- fetching initial data
     fetchTwitterStats();
     fetchInstagramStats();
     fetchFacebookStats();
@@ -80,7 +80,7 @@ function Dashboard() {
 
     return () => {
       clearInterval(interval);
-    };
+    }; */
   }, []);
 
   return (

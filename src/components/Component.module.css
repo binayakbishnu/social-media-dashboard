@@ -1,9 +1,57 @@
-.parentContainer {
+.outerParent {
     width: 100%;
     margin: 5% auto;
-    padding: 0%;
+    padding: 5%;
 
     border: 1px solid rgba(80, 80, 80, 1);
+    border-radius: 10px;
 
-    /* background-color: red; */
+    text-align: left;
+    color: white;
+
+    background-color: rgb(39, 39, 39);
+}
+
+.parentContainer {
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.parentHeadingContainerBorder {
+    margin-left: 1%;
+    border-radius: 0px 10px 10px 0px;
+    background-image: linear-gradient(to right,
+            white, rgba(0, 0, 0, 0));
+    padding-bottom: 2px;
+}
+
+.parentHeadingContainer {
+    background-color: rgb(39, 39, 39);
+    margin: 0;
+    padding: 2%;
+    padding-right: 5%;
+    /* width: fit-content; */
+
+    /* border: 1px solid white; */
+    border-radius: 0px 10px 0px 0px;
+    /* border-width: 0px 1px 1px 0px; */
+
+    /* border-image:
+        linear-gradient(to right,
+            red,
+            rgba(0, 0, 0, 0)) 1 100%;
+    border-style: solid;
+    border-width: 10px; */
+}
+
+.parentHeading {
+    margin: 0;
+    padding: 0;
+}
+
+.mainContent {
+    margin-top: 2%;
+    padding: 0% 2%;
+
+    /* background-color: purple; */
 }
