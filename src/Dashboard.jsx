@@ -14,12 +14,68 @@ import Common from './components/Common'
 function Dashboard() {
   const [data, setData] = useState(null);
 
+  const [instagramStats, setInstagramStats] = useState({});
+  const [facebookStats, setFacebookStats] = useState({});
+  const [linkedinStats, setLinkedinStats] = useState({});
+  const [twitterStats, setTwitterStats] = useState({});
+
   useEffect(() => {
+    //- fetching data from backend
+    const fetchTwitterStats = () => {
+      fetch('/api/twitter/stats')
+        .then(res => res.json())
+        .then(data => setTwitterStats(data))
+        .catch(error => console.error(error));
+    };
+    const fetchInstagramStats = () => {
+      fetch('/api/instagram/stats')
+        .then(res => res.json())
+        .then(data => setInstagramStats(data))
+        .catch(error => console.error(error));
+    };
+
+    const fetchFacebookStats = () => {
+      fetch('/api/facebook/stats')
+        .then(res => res.json())
+        .then(data => setFacebookStats(data))
+        .catch(error => console.error(error));
+    };
+
+    const fetchLinkedInStats = () => {
+      fetch('/api/linkedin/stats')
+        .then(res => res.json())
+        .then(data => setLinkedinStats(data))
+        .catch(error => console.error(error));
+    };
+    const fetchRedditStats = () => {
+      fetch('/api/reddit/stats')
+        .then(res => res.json())
+        .then(data => setTwitterStats(data))
+        .catch(error => console.error(error));
+    };
+
+
+    //- fetching initial data
+    fetchTwitterStats();
+    fetchInstagramStats();
+    fetchFacebookStats();
+    fetchLinkedInStats();
+    fetchRedditStats();
+
+
+    //- fetching data every 5 seconds
     const interval = setInterval(() => {
       // Fetch data from backend API
       fetch('/api/hello')
         .then(response => response.json())
         .then(data => setData(data));
+
+      //- fetching data
+      fetchTwitterStats();
+      fetchInstagramStats();
+      fetchFacebookStats();
+      fetchLinkedInStats();
+      fetchRedditStats();
     }, 5000);
 
     return () => {
@@ -39,10 +95,15 @@ function Dashboard() {
 
       <Common />
       <div className={`${dashBoardStyles.mainContentParent}`}>
+        {twitterStats && (
+          <Twitter
+            twitterStats={twitterStats}
+          />
+        )}
+
         <Instagram />
         <Facebook />
         <LinkedIn />
-        <Twitter />
         <Reddit />
 
         <AddMore />
