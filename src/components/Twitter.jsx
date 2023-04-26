@@ -6,11 +6,12 @@ function Twitter({ twitterStats }) {
   return (
     <div className={`${componentStyles.outerParent}`}>
       <div className={`${componentStyles.parentContainer}`}>
-        <div className={`${componentStyles.parentHeadingContainerBorder}`}>
+        {/* <div className={`${componentStyles.parentHeadingContainerBorder}`}> */}
           <div className={`${componentStyles.parentHeadingContainer}`}>
             <h3 className={`${componentStyles.parentHeading}`}>Twitter</h3>
+            <div className={`${componentStyles.parentHeadingLine}`}></div>
           </div>
-        </div>
+        {/* </div> */}
         <div className={`${componentStyles.mainContent}`}>
           <p className={`${componentStyles.dataFields}`}>
             Username: <span className={`${componentStyles.dataValues}`}> {twitterStats.username ? twitterStats.username : 'loremipsum'}</span>

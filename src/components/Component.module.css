@@ -17,23 +17,25 @@
     border-radius: 10px;
 }
 
-.parentHeadingContainerBorder {
-    margin-left: 1%;
-    border-radius: 0px 10px 10px 0px;
+/* .parentHeadingContainerBorder {
+    margin: 0% 1%;
+    border-radius: 10px 10px 10px 0px;
+    background-color: rgba(0, 0, 0, 0);
     background-image: linear-gradient(to right,
-            white, rgba(0, 0, 0, 0));
+            rgba(0, 0, 0, 0), white, rgba(0, 0, 0, 0));
     padding-bottom: 2px;
-}
+} */
 
 .parentHeadingContainer {
     background-color: rgb(39, 39, 39);
+
     margin: 0;
     padding: 2%;
-    padding-right: 5%;
+    padding-bottom: 0;
     /* width: fit-content; */
 
     /* border: 1px solid white; */
-    border-radius: 0px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
     /* border-width: 0px 1px 1px 0px; */
 
     /* border-image:
@@ -42,11 +44,26 @@
             rgba(0, 0, 0, 0)) 1 100%;
     border-style: solid;
     border-width: 10px; */
+
+    /* background-color: red; */
 }
 
 .parentHeading {
     margin: 0;
     padding: 0;
+    margin-left: 1%;
+
+    /* text-align: center; */
+}
+
+.parentHeadingLine {
+    height: 3px;
+    width: 90%;
+    /* background-color: white; */
+    background-image: linear-gradient(to right, white, rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(to right, white, rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(to right, white, rgba(0, 0, 0, 0));
+    background-image: -webkit-linear-gradient(to right, white, rgba(0, 0, 0, 0));
 }
 
 .mainContent {
