@@ -64,23 +64,23 @@ function Dashboard() {
 
 
     //- fetching data every 5 seconds
-    // const interval = setInterval(() => {
-    //   // Fetch data from backend API
-    //   fetch('/api/hello')
-    //     .then(response => response.json())
-    //     .then(data => setData(data));
+    const interval = setInterval(() => {
+      // Fetch data from backend API
+      fetch('/api/hello')
+        .then(response => response.json())
+        .then(data => setData(data));
 
-    //   //- fetching data
-    //   fetchTwitterStats();
-    //   fetchInstagramStats();
-    //   fetchFacebookStats();
-    //   fetchLinkedInStats();
-    //   fetchRedditStats();
-    // }, 5000);
+      //- fetching data
+      fetchTwitterStats();
+      fetchInstagramStats();
+      fetchFacebookStats();
+      fetchLinkedInStats();
+      fetchRedditStats();
+    }, 5000);
 
-    // return () => {
-    //   clearInterval(interval);
-    // };
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return (
