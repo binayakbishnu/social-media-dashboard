@@ -14,10 +14,10 @@ import Common from './components/Common'
 function Dashboard() {
   const [data, setData] = useState(null);
 
+  const [twitterStats, setTwitterStats] = useState({});
   const [instagramStats, setInstagramStats] = useState({});
   const [facebookStats, setFacebookStats] = useState({});
   const [linkedinStats, setLinkedinStats] = useState({});
-  const [twitterStats, setTwitterStats] = useState({});
 
   useEffect(() => {
     //- fetching data from backend
@@ -55,7 +55,7 @@ function Dashboard() {
     };
 
 
-    /* //- fetching initial data
+    //- fetching initial data
     fetchTwitterStats();
     fetchInstagramStats();
     fetchFacebookStats();
@@ -80,7 +80,7 @@ function Dashboard() {
 
     return () => {
       clearInterval(interval);
-    }; */
+    };
   }, []);
 
   return (
@@ -94,6 +94,7 @@ function Dashboard() {
       )}
 
       <Common />
+
       <div className={`${dashBoardStyles.mainContentParent}`}>
         {twitterStats && (
           <Twitter
@@ -101,9 +102,23 @@ function Dashboard() {
           />
         )}
 
-        <Instagram />
-        <Facebook />
-        <LinkedIn />
+        {instagramStats && (
+          <Instagram
+            instagramStats={instagramStats}
+          />
+        )}
+        {facebookStats && (
+          <Facebook
+            facebookStats={facebookStats}
+          />
+        )}
+        {linkedinStats && (
+          <LinkedIn
+            linkedinStats={linkedinStats}
+          />
+        )}
+
+
         <Reddit />
 
         <AddMore />
