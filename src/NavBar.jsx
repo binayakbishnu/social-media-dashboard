@@ -8,7 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FaCog, FaDoorOpen } from 'react-icons/fa'
 
 import logo from './media_assets/logo.png'
-import profilePic from './media_assets/profilePic.jpeg'
+import profilePic from './media_assets/profilePic.jpg'
 
 function NavBar() {
     return (
@@ -23,12 +23,11 @@ function NavBar() {
                             height="30"
                             className="d-inline-block align-top rounded"
                         />{' '}
-                        SMD
+                        {/* SMD */}
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" menuVariant="dark" />
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-                        <Nav className="me-auto">
-                            <Nav.Link href="/">Home</Nav.Link>
+                        <Nav className="me-4">
                             <Nav.Link href="/features">Features</Nav.Link>
                             <Nav.Link href="/pricing">Pricing</Nav.Link>
                         </Nav>
@@ -47,9 +46,7 @@ function NavBar() {
                             <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Settings <FaCog /></NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Logout <FaDoorOpen />
-                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">Logout <FaDoorOpen /></NavDropdown.Item>
                         </NavDropdown>
                     </Navbar.Collapse>
                 </Container>
